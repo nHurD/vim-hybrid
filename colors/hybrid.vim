@@ -108,11 +108,12 @@ else
   let s:vmode      = "cterm"
   if g:hybrid_no_term_bg == 1
       let s:background = "NONE"
+      let s:darkcolumn = "NONE"
   else
       let s:background = "234"
+      let s:darkcolumn = "234"
   endif
   let s:window     = "236"
-  let s:darkcolumn = "234"
   let s:addbg      = "65"
   let s:addfg      = "193"
   let s:changebg   = "60"
