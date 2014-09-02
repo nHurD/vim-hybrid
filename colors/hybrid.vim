@@ -64,6 +64,10 @@ if !exists("g:hybrid_use_iTerm_colors")
   let g:hybrid_use_iTerm_colors = 0
 endif
 
+if !exists("g:hybrid_no_term_bg")
+    let g:hybrid_no_term_bg = 0
+endif
+
 set background=dark
 hi clear
 
@@ -102,7 +106,11 @@ if has("gui_running")
   let s:darkpurple = "#5f005f"
 else
   let s:vmode      = "cterm"
-  let s:background = "234"
+  if g:hybrid_no_term_bg == 1
+      let s:background = "NONE"
+  else
+      let s:background = "234"
+  endif
   let s:window     = "236"
   let s:darkcolumn = "234"
   let s:addbg      = "65"
